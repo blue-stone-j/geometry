@@ -1,9 +1,9 @@
 
 #include <iostream>
 
-#include "convex_hull/convex_hull2d.h"
+#include "hull/convex_hull/convex_hull2d.h"
 #include "common/cloud_definition.hpp"
-#include "src/convex_hull/convex_hull2d.cpp"
+#include "hull/convex_hull/convex_hull2d.cpp"
 
 typedef Point2D<float> PointF;
 typedef PointCloud<PointF> PointFCloud;

@@ -1,7 +1,7 @@
 
 #include <Eigen/Dense>
 
-#include "circle_hull/circle_hull.h"
+#include "hull/circle_hull/circle_hull.h"
 
 CircleHull::CircleHull() :
   circle_()

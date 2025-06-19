@@ -1,4 +1,4 @@
-#include "arc/midpoint_angle.h"
+#include "arc/midpoint_angle/midpoint_angle.h"
 
 
 // 将角度标准化到[0, 2π]范围
@@ -44,8 +44,8 @@ double calculateAverageAngle(const std::vector<double> &angles)
     sumCos += cos(angle);
   }
 
-  double avgX = sumCos / angles.size( );
-  double avgY = sumSin / angles.size( );
+  double avgX = sumCos / angles.size();
+  double avgY = sumSin / angles.size();
 
   double averageAngle = atan2(avgY, avgX);
 

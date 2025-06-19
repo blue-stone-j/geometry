@@ -1,4 +1,4 @@
-#include "polyline_simplification/polyline_simplification.h"
+#include "line/polyline_simplification/polyline_simplification.h"
 
 
 int main(int argc, char const *argv[])
@@ -13,22 +13,22 @@ int main(int argc, char const *argv[])
   switch (mode)
   {
     case 0:
-      ps = new RadialDistance( );
+      ps = new RadialDistance();
       break;
     case 1:
-      ps = new PerpendicularDistance( );
+      ps = new PerpendicularDistance();
       break;
     case 2:
-      ps = new DouglasPeucker( );
+      ps = new DouglasPeucker();
       break;
     default:
-      ps = new RadialDistance( );
+      ps = new RadialDistance();
       break;
   }
 
   ps->readPoly("../assets/polyline_simplification/poly.json");
 
-  ps->simplifyBase( );
+  ps->simplifyBase();
 
   ps->writePoly("../assets/polyline_simplification/ps.json");
 

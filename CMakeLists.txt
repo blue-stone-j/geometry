@@ -17,6 +17,10 @@ find_package(PkgConfig)
 # 2. 设置变量：根据查询到的信息，CMake 会设置一系列变量，这些变量使用 JSONCPP 作为前缀。例如，JSONCPP_INCLUDE_DIRS、JSONCPP_LIBRARY_DIRS 和 JSONCPP_LIBRARIES。
 pkg_check_modules(JSONCPP jsoncpp)
 
+set(module_dir ${CMAKE_CURRENT_SOURCE_DIR}/modules)
+
+include_directories(modules)
+
 include(${CMAKE_CURRENT_SOURCE_DIR}/cmake/alpha_shape.cmake)
 include(${CMAKE_CURRENT_SOURCE_DIR}/cmake/arc.cmake)
 include(${CMAKE_CURRENT_SOURCE_DIR}/cmake/circle_hull.cmake)

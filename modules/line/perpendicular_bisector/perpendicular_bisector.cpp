@@ -1,7 +1,7 @@
 
 #include <iostream>
 
-#include "line/perpendicular_bisector.h"
+#include "line/perpendicular_bisector/perpendicular_bisector.h"
 
 
 // 计算中点

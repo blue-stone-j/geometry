@@ -1,3 +1,3 @@
 
-add_executable(convex_hull2d src/convex_hull/convex_hull2d.cpp test/convex_hull/convex_hull2d_test.cpp)
-target_include_directories(convex_hull2d PUBLIC ${EIGEN3_INCLUDE_DIR} ${CMAKE_CURRENT_SOURCE_DIR}/include)
+add_executable(convex_hull2d ${module_dir}/hull/convex_hull/convex_hull2d.cpp ${module_dir}/hull/test/convex_hull2d_test.cpp)
+target_include_directories(convex_hull2d PUBLIC ${EIGEN3_INCLUDE_DIR} ${module_dir}/hull/convex_hull)

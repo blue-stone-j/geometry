@@ -1,7 +1,7 @@
 
 #include <iostream>
 
-#include "arc/midpoint_angle.h"
+#include "arc/midpoint_angle/midpoint_angle.h"
 
 
 int main()

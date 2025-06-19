@@ -1,5 +1,5 @@
 #include <algorithm>
-#include "arc/min_arc.h"
+#include "arc/min_arc/min_arc.h"
 
 template <typename Scalar>
 MinArc<Scalar>::MinArc() :

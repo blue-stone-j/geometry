@@ -1,7 +1,7 @@
 
 #include <iostream>
 
-#include "circle_hull/circle_hull.h"
+#include "hull/circle_hull/circle_hull.h"
 
 int main(int argc, char const *argv[])
 {

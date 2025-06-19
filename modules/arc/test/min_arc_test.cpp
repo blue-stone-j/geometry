@@ -2,9 +2,9 @@
 #include <vector>
 #include <algorithm>
 
-#include "arc/arc_utils.h"
-#include "arc/min_arc.h"
-#include "src/arc/min_arc.cpp"
+#include "arc/common/arc_utils.h"
+#include "arc/min_arc/min_arc.h"
+#include "arc/min_arc/min_arc.cpp"
 
 // 主程序
 int main()
