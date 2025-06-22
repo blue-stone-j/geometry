@@ -2,12 +2,14 @@
 #include <vector>
 #include <algorithm>
 
+#include <gtest/gtest.h>
+
 #include "arc/common/arc_utils.h"
 #include "arc/min_arc/min_arc.h"
 #include "arc/min_arc/min_arc.cpp"
 
 // 主程序
-int main()
+TEST(Test, test1)
 {
   // 假设三个点的坐标
   std::vector<std::pair<double, double>> points = {
@@ -43,6 +45,11 @@ int main()
 
   // index of last point in this arc
   std::cout << "id: " << last_index << std::endl;
+}
 
-  return 0;
+int main(int argc, char **argv)
+{
+  ::testing::InitGoogleTest(&argc, argv);
+
+  return RUN_ALL_TESTS();
 }

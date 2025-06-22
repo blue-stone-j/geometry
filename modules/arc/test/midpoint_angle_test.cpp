@@ -1,10 +1,12 @@
 
+#include <cmath>
 #include <iostream>
+
+#include <gtest/gtest.h>
 
 #include "arc/midpoint_angle/midpoint_angle.h"
 
-
-int main()
+TEST(Test, test1)
 {
   double midAngle;
 
@@ -21,5 +23,11 @@ int main()
   midAngle = calculateAverageAngle(angles);
   std::cout << "Midpoint Angle: " << midAngle << " radians" << std::endl;
 
-  return 0;
+  // EXPECT_NEAR(midAngle, 0.0, 1e-6);
+}
+int main(int argc, char **argv)
+{
+  ::testing::InitGoogleTest(&argc, argv);
+
+  return RUN_ALL_TESTS();
 }

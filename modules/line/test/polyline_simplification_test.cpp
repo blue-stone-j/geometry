@@ -1,14 +1,15 @@
+
+
+#include <gtest/gtest.h>
+
 #include "line/polyline_simplification/polyline_simplification.h"
 
 
-int main(int argc, char const *argv[])
+TEST(Test, test1)
 {
   // std::vector<Point3D> points;
   int mode = 1;
-  if (argc > 1)
-  {
-    mode = std::atoi(argv[1]);
-  }
+
   PolylineSimplification *ps;
   switch (mode)
   {
@@ -31,6 +32,11 @@ int main(int argc, char const *argv[])
   ps->simplifyBase();
 
   ps->writePoly("../assets/polyline_simplification/ps.json");
+}
 
-  return 0;
+int main(int argc, char **argv)
+{
+  ::testing::InitGoogleTest(&argc, argv);
+
+  return RUN_ALL_TESTS();
 }

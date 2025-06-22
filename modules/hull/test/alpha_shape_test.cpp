@@ -1,7 +1,17 @@
+
+
+#include <gtest/gtest.h>
+
 #include "alpha_shape.h"
 
-int main(int argc, char const *argv[])
+TEST(Test, test1)
 {
   AlphaShape alpha_shape;
-  return 0;
+}
+
+int main(int argc, char **argv)
+{
+  ::testing::InitGoogleTest(&argc, argv);
+
+  return RUN_ALL_TESTS();
 }

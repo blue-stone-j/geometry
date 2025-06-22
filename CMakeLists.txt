@@ -6,7 +6,7 @@ add_compile_options(-std=c++17)
 set(CMAKE_CXX_FLAGS_RELEASE "-O3")
 
 find_package(Eigen3 REQUIRED)
-
+find_package(GTest REQUIRED)
 include_directories(${CMAKE_SOURCE_DIR})
 
 # pkg-config 是一个在 UNIX-like 系统中广泛使用的计算机工具，它帮助在编译阶段自动从已安装的库中获取关于编译器和链接器选项的信息。
@@ -19,7 +19,11 @@ pkg_check_modules(JSONCPP jsoncpp)
 
 set(module_dir ${CMAKE_CURRENT_SOURCE_DIR}/modules)
 
-include_directories(modules)
+include_directories(modules ${GTEST_INCLUDE_DIRS})
+
+link_directories(GTest::GTest GTest::Main)
+
+enable_testing()
 
 include(${CMAKE_CURRENT_SOURCE_DIR}/cmake/alpha_shape.cmake)
 include(${CMAKE_CURRENT_SOURCE_DIR}/cmake/arc.cmake)

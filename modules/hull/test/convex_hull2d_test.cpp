@@ -1,6 +1,8 @@
 
 #include <iostream>
 
+#include <gtest/gtest.h>
+
 #include "hull/convex_hull/convex_hull2d.h"
 #include "common/cloud_definition.hpp"
 #include "hull/convex_hull/convex_hull2d.cpp"
@@ -8,7 +10,7 @@
 typedef Point2D<float> PointF;
 typedef PointCloud<PointF> PointFCloud;
 
-int main()
+TEST(Test, test1)
 {
   ConvexHull2D<PointFCloud, PointFCloud> convex_hull_2d;
   PointFCloud pointcloud_in, pointcloud_out;
@@ -80,8 +82,11 @@ int main()
                                                           distance_above_ground_threshold,
                                                           distance_beneath_head_threshold,
                                                           &pointcloud_out);
+}
 
+int main(int argc, char **argv)
+{
+  ::testing::InitGoogleTest(&argc, argv);
 
-
-  return 0;
+  return RUN_ALL_TESTS();
 }

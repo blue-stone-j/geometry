@@ -1,9 +1,11 @@
 
 #include <iostream>
 
+#include <gtest/gtest.h>
+
 #include "hull/circle_hull/circle_hull.h"
 
-int main(int argc, char const *argv[])
+TEST(Test, test1)
 {
   CircleHull circle_hull;
   std::vector<PointT> points = {
@@ -18,6 +20,11 @@ int main(int argc, char const *argv[])
   auto circle = circle_hull.getCircleHull();
   std::cout << circle.center << std::endl;
   std::cout << circle.radius << std::endl;
+}
 
-  return 0;
+int main(int argc, char **argv)
+{
+  ::testing::InitGoogleTest(&argc, argv);
+
+  return RUN_ALL_TESTS();
 }
