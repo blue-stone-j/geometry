@@ -25,9 +25,6 @@ link_directories(GTest::GTest GTest::Main)
 
 enable_testing()
 
-include(${CMAKE_CURRENT_SOURCE_DIR}/cmake/alpha_shape.cmake)
-include(${CMAKE_CURRENT_SOURCE_DIR}/cmake/arc.cmake)
-include(${CMAKE_CURRENT_SOURCE_DIR}/cmake/circle_hull.cmake)
-include(${CMAKE_CURRENT_SOURCE_DIR}/cmake/convex_hull.cmake)
-include(${CMAKE_CURRENT_SOURCE_DIR}/cmake/line.cmake)
-include(${CMAKE_CURRENT_SOURCE_DIR}/cmake/polyline_simplification.cmake)
+add_subdirectory(modules/arc)
+add_subdirectory(modules/hull)
+add_subdirectory(modules/line)
