@@ -10,6 +10,8 @@
 
 #include "common/point_definition.h"
 
+#include "hull/common/common.hpp"
+
 class GiftWrapping
 {
  public:

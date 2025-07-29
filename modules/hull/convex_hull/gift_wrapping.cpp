@@ -1,10 +1,4 @@
-#include "convex_hull/gift_wrapping.h"
-
-// Cross product of vectors p0p1 and p0p2
-int cross(const Point2D<float> &p0, const Point2D<float> &p1, const Point2D<float> &p2)
-{
-  return (p1.x - p0.x) * (p2.y - p0.y) - (p1.y - p0.y) * (p2.x - p0.x);
-}
+#include "hull/convex_hull/gift_wrapping.h"
 
 // Find the point with the lowest y (break ties with lowest x)
 int leftmost_point(const std::vector<Point2D<float>> &points)

@@ -1,13 +1,8 @@
 
-#include "convex_hull/monotone_chain.h"
+#include "hull/convex_hull/monotone_chain.h"
 #include <algorithm>
 
 
-// Cross product to determine orientation
-int cross(const Point2D<float> &O, const Point2D<float> &A, const Point2D<float> &B)
-{
-  return (A.x - O.x) * (B.y - O.y) - (A.y - O.y) * (B.x - O.x);
-}
 
 // Compute the convex hull using Andrew's monotone chain
 std::vector<Point2D<float>> convexHull(std::vector<Point2D<float>> points)

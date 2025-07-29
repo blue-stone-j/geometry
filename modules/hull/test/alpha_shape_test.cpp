@@ -2,7 +2,7 @@
 
 #include <gtest/gtest.h>
 
-#include "alpha_shape.h"
+#include "hull/alpha_shape/alpha_shape.h"
 
 TEST(Test, test1)
 {

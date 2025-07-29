@@ -4,6 +4,7 @@
 
 #include <vector>
 #include "common/point_definition.h"
+#include "hull/common/common.hpp"
 
 class MonotoneChain
 {
