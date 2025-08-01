@@ -5,6 +5,16 @@ set(CMAKE_BUILD_TYPE "Release")
 add_compile_options(-std=c++17)
 set(CMAKE_CXX_FLAGS_RELEASE "-O3 -Wall -pthread")
 
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+if(NOT DEFINED BGEOMETRY_VERSION)
+  set(BGEOMETRY_VERSION_MAJOR 1)
+  set(BGEOMETRY_VERSION_MINOR 0)
+  set(BGEOMETRY_VERSION_PATCH 0)
+  set(BGEOMETRY_VERSION ${BGEOMETRY_VERSION_MAJOR}.${BGEOMETRY_VERSION_MINOR}.${BGEOMETRY_VERSION_PATCH})
+  set(CMAKE_INSTALL_PREFIX ${CMAKE_CURRENT_SOURCE_DIR}/install/${PROJECT_NAME}-${BGEOMETRY_VERSION})
+endif()
+
 
 # pkg-config 是一个在 UNIX-like 系统中广泛使用的计算机工具，它帮助在编译阶段自动从已安装的库中获取关于编译器和链接器选项的信息。
 # 这个工具设计用于通过一个中心化的方式管理软件库的元数据，如版本、描述、编译器和链接器的标志等。

@@ -43,7 +43,8 @@ int PolylineSimplification::readPoly(std::string file)
   }
 
   poly.clear();
-  for (int i = 0; i < root.size(); ++i)
+  int size = static_cast<int>(root.size());
+  for (int i = 0; i < size; ++i)
   {
     const Json::Value &pt = root[i];
     poly.push_back(Point3D(pt["x"].asDouble(), pt["y"].asDouble(), pt["z"].asDouble()));
@@ -64,7 +65,7 @@ int PolylineSimplification::writePoly(std::string file)
   std::cout << "size of ps: " << poly_s.size() << std::endl;
 
   Json::Value root;
-  for (int i = 0; i < poly_s.size(); i++)
+  for (std::size_t i = 0; i < poly_s.size(); i++)
   {
     Json::Value pt;
     pt["x"] = poly_s[i].x;

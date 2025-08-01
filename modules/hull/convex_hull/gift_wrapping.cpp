@@ -1,10 +1,10 @@
 #include "hull/convex_hull/gift_wrapping.h"
 
 // Find the point with the lowest y (break ties with lowest x)
-int leftmost_point(const std::vector<Point2D<float>> &points)
+int findLeftmostPoint(const std::vector<Point2D<float>> &points)
 {
   int idx = 0;
-  for (int i = 1; i < points.size(); ++i)
+  for (std::size_t i = 1; i < points.size(); ++i)
   {
     if (points[i].x < points[idx].x || (points[i].x == points[idx].x && points[i].y < points[idx].y))
     {
@@ -21,7 +21,7 @@ std::vector<Point2D<float>> convexHull(const std::vector<Point2D<float>> &points
   if (n < 3) return points;
 
   std::vector<Point2D<float>> hull;
-  int l = leftmost_point(points);
+  int l = findLeftmostPoint(points);
   int p = l, q;
 
   do

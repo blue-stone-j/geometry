@@ -84,7 +84,7 @@ int MinArc<Scalar>::process()
   }
 
   // 计算圆弧的起点和终点角度
-  start_angle_ = (max_gap_index_ == angles.size() - 1) ? angles[0] : angles[max_gap_index_ + 1];
+  start_angle_ = (max_gap_index_ == static_cast<int>(angles.size()) - 1) ? angles[0] : angles[max_gap_index_ + 1];
   end_angle_   = angles[max_gap_index_];
 
   arc_range_ = end_angle_ - start_angle_;
