@@ -9,3 +9,14 @@ poly.json
 
 res.cpp
 .vs
+
+.cache
+.vscode
+
+build
+devel
+install
+
+*/cmake/*Config.cmake
+
+/modules/common/global_definition.h

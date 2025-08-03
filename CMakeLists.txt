@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.16.3)
-project(geometry)
+project(bgeometry)
 
 set(CMAKE_BUILD_TYPE "Release")
 add_compile_options(-std=c++17)
@@ -90,3 +90,7 @@ foreach(sub_element ${sub_elements})
         add_subdirectory("${modules_directory}/${sub_element}")
     endif()
 endforeach()
+
+include(cmake/global_definition.cmake)
+
+include(cmake/install_files.cmake)
